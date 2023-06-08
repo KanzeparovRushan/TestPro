@@ -1,4 +1,4 @@
-# TestProds
+# CMS
 .NET Smart Core Content Management System 
 Mikhail Flenov
 http://www.profwebdev.com
