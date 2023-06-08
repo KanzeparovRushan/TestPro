@@ -1,0 +1,11 @@
+﻿@{
+    Dictionary<string, object> filters = new Dictionary<string, object>()
+    {
+        { SiteGlobals.DATE_RANGE_FILTER_NAME, DateTime.Now }
+    };
+
+    ViewData["Title"] = @Html.GetContentAsString(SiteGlobals.ABOUT_REPOSITORY_NAME, "Title", filters);
+}
+<h1>@Html.GetContentAsString(SiteGlobals.ABOUT_REPOSITORY_NAME, "Title", filters)</h1>
+
+<p>@Html.GetContentAsString(SiteGlobals.ABOUT_REPOSITORY_NAME, "Content", filters)</p>

@@ -1,0 +1,12 @@
+<h1>"{{model.name}}" structure</h1>
+<div *ngFor="let definition of model.contentDefinitions" [attr.id]="definition.definitionId" class="cms-repository">
+    <div class="cms-right fa fa-times link" (click)="deleteRow(definition.definitionId)"></div>
+    <sh-content-definition [definition]='definition'></sh-content-definition>
+</div>
+
+<ng-template contentplaceholder></ng-template>
+
+<div class="cms-buttons">
+    <button class="cms-button" (click)="onSubmit()">Save</button>
+    <button class="cms-button" (click)="onAddValue()">Add value</button>
+</div>

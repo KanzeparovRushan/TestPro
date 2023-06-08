@@ -1,0 +1,48 @@
+Анаизатор ошибок
+Анализ проблемных мест кода был проведен с использованием утилиты PVS-Studio (ссылка на расширение https://pvs-studio.ru/ru/).
+Данный анализатор имеет интерфейс в Visual Studio и позволяет проверть код, написанный на нескольких языках.
+
+Исследуемый объект
+Исследуемый репозиторий https://github.com/mflenov/cms это интеллектуальная система управления контентом. Когда нам нужно показать разные данные на странице на основе разных параметров, мы можем реализовать логику в представлениях. Этот подход работает нормально, но требует некоторого кодирования.
+Данное ПО  может осуществлять поиск на нескольких языках:  Java, C++, C#. Следовательно поиск ошибок будет проводиться по этим языкам.
+
+Ошибки
+
+1) 
+V3146. Possible null dereference of 'propertyinfo'. The 'FirstOrDefault' can return default null value.
+Анализатор обнаружил небезопасное использование результата вызова одного из методов FirstOrDefault , которые могут вернуть 'default' значение.
+Примеры таких методов: 'FirstOrDefault', 'LastOrDefault', 'SingleOrDefault' и 'ElementAtOrDefault'. 
+Эти методы возвращают значение по умолчанию, если в массиве нет ни одного объекта, удовлетворяющего предикату поиска. 
+Значением по умолчанию для ссылочных типов является пустая ссылка (null). 
+Соответственно, прежде чем использовать полученную ссылку, её следует проверить.
+
+2)
+V3146. Expression 'continentItem==null' is always false
+  IContentDefinition definition = repo.GetByName(contentName);
+            ContentItem contentItem = contentStore.GetDefaultByDefinitionId(definition.DefinitionId).FirstOrDefault();
+            if (contentItem == null)
+            {
+                return "";
+            }
+
+            return contentItem == null ? "" : contentItem.GetValue().ToString();
+Добавлена дополнительная проверка ,лишняя строка. 			
+			
+
+3)V3146. Possible null dereference of 'propertyinfo'. The 'FirstOrDefault' can return default null value.
+Анализатор обнаружил небезопасное использование результата вызова одного из методов FirstOrDefault , которые могут вернуть 'default' значение.
+Примеры таких методов: 'FirstOrDefault', 'LastOrDefault', 'SingleOrDefault' и 'ElementAtOrDefault'. 
+Эти методы возвращают значение по умолчанию, если в массиве нет ни одного объекта, удовлетворяющего предикату поиска. 
+Значением по умолчанию для ссылочных типов является пустая ссылка (null). 
+Соответственно, прежде чем использовать полученную ссылку, её следует проверить.
+  var folderDefinition = repo.ContentDefinitions.Where(m => m.DefinitionId == folder.DefinitionId).FirstOrDefault();
+            if (folderDefinition.GetDefinitionType() != ContentDefinitionType.Folder)
+            {
+                return null;
+            }
+            return folder.GetItem((folderDefinition as FolderContentDefinition).Definitions.Where(m => m.Name == itemname).FirstOrDefault()?.DefinitionId);
+
+
+
+Все вышеперечисленые ошибки встречаются неоднократно, в коде есть не такое боьшое колличетсво ошибок так как проект не такой большой. 
+Но большинство из них анализатр отмечает низким уровнем угрозы.

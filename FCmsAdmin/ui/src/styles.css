@@ -1,0 +1,239 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "~font-awesome/css/font-awesome.min.css";
+
+
+.fcms {
+  background: #34495e;
+}
+
+.fcms a {
+  color: #f07b66;
+  cursor: pointer;
+}
+
+.fcms b {
+  font-weight: 500;
+}
+
+.fcms h2 {
+  font-size: 130%;
+}
+
+.fcms h3 {
+  font-size: 120%;
+}
+
+.fcms h4 {
+  font-size: 100%;
+}
+
+.fcms a:visited {
+  color: #f07b66;
+}
+
+.fcms label {
+  font-weight: 300;
+}
+
+.fcms .nav {
+  padding-top: 8px;
+}
+
+.fcms a:hover {
+  color: #f07b66;
+  text-decoration: underline;
+}
+
+.fcms .header {
+  background: #34495e;
+  padding: 20px 0px;
+}
+
+.fcms .header .cms-logo {
+  font-size: 140%;
+}
+
+.fcms .header .menu {
+  font-size: 110%;
+}
+
+.fcms .page {
+  min-height: 500px;
+  background: rgb(240, 247, 255);
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+
+.fcms .footer {
+  background: #34495e;
+  color: white;
+  padding: 20px 0px;
+}
+
+.fcms .error {
+  color: #e00;
+}
+
+.fcms h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.fcms .cms-table {
+  width: 100%;
+}
+
+.fcms .cms-table th {
+  width: 100%;
+  background: #fff;
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+}
+
+.fcms .cms-table td {
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+}
+
+.fcms .cms-table ul {
+  margin-left: 0px;
+  padding-left: 20px;
+}
+
+.fcms .cms-buttons .cms-button {
+  margin-right: 12px;
+}
+
+.fcms .cms-right {
+  float:right;
+}
+
+.fcms .cms-button {
+  display: inline-block;
+  padding: 0px 20px 0px 20px;
+  color: #f07b66;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #c17b48;
+  font-style: normal;
+  text-transform: uppercase;
+  outline: none;
+  text-decoration: none;
+  background: #d4e9fe;
+}
+
+.fcms .link {
+    cursor: pointer;
+}
+
+.fcms .cms-button:hover {
+  color: white;
+  text-decoration: none;
+  background: #f07b66;
+}
+
+.fcms .cms-menu {
+    font-size:120%;
+}
+
+.fcms .cms-menu a {
+  padding-right: 12px;
+}
+
+.fcms .cms-repository {
+  border: 1px solid #999;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  box-shadow: 0px 1px 5px #aaa;
+}
+
+.fcms .cms-rightrail {
+  border: 1px solid #999;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  box-shadow: 0px 1px 5px #aaa;
+}
+
+.fcms .cms-repository .cms-subline {
+  color: #999;
+}
+
+.fcms .cms-subline {
+  display: block;
+  color: #777;
+  border-bottom: 1px solid #777;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.fcms .cms-hidden {
+  display: none;
+}
+
+.fcms .cms-right {
+  float: right;
+}
+
+.fcms .cms-controls {
+  padding: 4px 4px 4px 0px;
+}
+
+.fcms .cms-right-controls {
+  text-align: right;
+  padding: 4px 0px 4px 0px;
+}
+
+.fcms .form-group{
+    padding: 10px 0px;
+}
+
+.fcms .cms-folder {
+    background:#f5f5f5;
+    border:1px solid #bbb;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.fcms .fcms-forlder-item {
+    padding-bottom:12px;
+}
+
+.fcms .fcms-forlder-item:nth-of-type(1) {
+  padding-top: 4px;
+}
+
+.fcms .fcms-filter-item {
+    padding:8px;
+    background:rgb(227 240 255);
+    border: 1px solid #ddd;
+    margin-bottom:8px;
+}
+
+.fcms .fcms-top-search {
+  border: 1px solid #999;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgb(240, 247, 255);
+}
+
+.fcms .padding-left-8 {
+  padding-left:8px;
+}
+
+.fcms h1 a,
+.fcms h1 a:visited{
+    color:#000;
+}
+
+.fcms hr {
+  padding: 0px;
+  margin: 0px 0px 8px 0px;
+  border: 0px;
+  color: #aaa;
+}
